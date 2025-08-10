@@ -1,6 +1,6 @@
 # YouTube Live Tracker
 
-A Google Apps Script that automatically discovers and logs live streams from multiple YouTube channels to Google Sheets, with optional playlist integration.
+A Google Apps Script that automatically discovers and logs live streams from multiple YouTube channels to Google Sheets, with playlist integration.
 
 ## What It's For
 
